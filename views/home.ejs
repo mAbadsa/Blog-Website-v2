@@ -1,0 +1,32 @@
+<%- include('partials/header'); -%>
+
+<div class="jumbotron jumbotron-fluid mb-0">
+    <div class="container">
+        <h1> <%= title %> </h1>
+        <p class="post-body"><%= homeStartingContent%></p>
+    </div>
+</div>
+<div class="posts">
+    <div class="container">
+        <h2 class="sec-title">
+            Articles
+        </h2>
+        <% for (let i = 0; i < posts.length; i++) { %>
+        <article class="">
+            <h3><%= posts[i].title %></h3>
+            <!-- <div class="post-body-box"> -->
+            <p id="post-content"><%= posts[i].content.substring(0, 100) + " " %>
+                <span style="color: mediumblue"> ...</span>
+                <a href="/posts/<%= posts[i]._id%>" class="read-more">Read more</a>
+            </p>
+            <!-- <span class="absolute">
+                        <button class="visable" type="submit" id="more">...</button>
+                        <button class="hidden" type="submit" id="less">...</button>
+                    </span> -->
+            <!-- </div> -->
+        </article>
+        <% } %>
+    </div>
+</div>
+
+<%- include('partials/footer'); -%>

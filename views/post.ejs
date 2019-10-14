@@ -1,0 +1,20 @@
+<%- include('partials/header'); -%>
+
+<div class="posts">
+        <div class="container">
+            <h2 class="sec-title">
+                Article
+            </h2>
+            <%# for (let i = 0; i < posts.length; i++) { %>
+                <!-- <article class=""> -->
+                    <!-- <h3><%# posts[i].title %></h3> -->
+                    <!-- <p><%# posts[i].content %></p> -->
+                <!-- </article> -->
+            <%# } %>
+                <article class="">
+                    <h3><%= post.title %></h3>
+                    <p><%= post.content %></p>
+                </article>
+        </div>
+    </div>
+<%- include('partials/footer'); -%>
